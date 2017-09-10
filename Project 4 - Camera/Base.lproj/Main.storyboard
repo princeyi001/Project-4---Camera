@@ -39,7 +39,7 @@
                     <navigationItem key="navigationItem" id="b2l-pe-ZiN">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="mIO-5B-8vk">
                             <connections>
-                                <segue destination="L01-hG-l8R" kind="show" id="JoG-q2-BDQ"/>
+                                <segue destination="L01-hG-l8R" kind="show" identifier="artSegue" id="JoG-q2-BDQ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -82,6 +82,14 @@
                                     <action selector="addTapped:" destination="L01-hG-l8R" eventType="touchUpInside" id="Fa7-qg-y4t"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EpR-3u-2oL">
+                                <rect key="frame" x="165" y="484" width="45" height="30"/>
+                                <state key="normal" title="Delete"/>
+                                <connections>
+                                    <action selector="addTapped:" destination="L01-hG-l8R" eventType="touchUpInside" id="mhI-Dq-Cv2"/>
+                                    <action selector="deleteTapped:" destination="L01-hG-l8R" eventType="touchUpInside" id="WQz-XS-XZk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -95,6 +103,8 @@
                             <constraint firstItem="sI0-up-55P" firstAttribute="top" secondItem="SOD-hv-ADV" secondAttribute="bottom" constant="30" id="j2a-lu-NUL"/>
                             <constraint firstItem="SOD-hv-ADV" firstAttribute="top" secondItem="l4g-cm-9B3" secondAttribute="bottom" constant="30" id="kbx-R9-gKp"/>
                             <constraint firstItem="l4g-cm-9B3" firstAttribute="centerX" secondItem="GBK-ZP-tjm" secondAttribute="centerX" id="msN-lK-hgf"/>
+                            <constraint firstItem="EpR-3u-2oL" firstAttribute="centerX" secondItem="GBK-ZP-tjm" secondAttribute="centerX" id="uJB-Nf-BL3"/>
+                            <constraint firstItem="EpR-3u-2oL" firstAttribute="top" secondItem="sI0-up-55P" secondAttribute="bottom" constant="10" id="wIx-SB-C2R"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ONU-kh-mX9">
@@ -112,7 +122,9 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="addUpdateButton" destination="sI0-up-55P" id="hrw-K0-jB5"/>
                         <outlet property="artView" destination="l4g-cm-9B3" id="y18-mK-u91"/>
+                        <outlet property="deleteButton" destination="EpR-3u-2oL" id="YCe-sJ-uba"/>
                         <outlet property="nameTextField" destination="SOD-hv-ADV" id="Glh-wY-H5k"/>
                     </connections>
                 </viewController>
