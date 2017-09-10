@@ -1,14 +1,20 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="C1b-fV-zgw">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Project_4___Camera" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -18,9 +24,107 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="b2l-pe-ZiN">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="mIO-5B-8vk">
+                            <connections>
+                                <segue destination="L01-hG-l8R" kind="show" id="JoG-q2-BDQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="840.79999999999995" y="123.68815592203899"/>
+        </scene>
+        <!--Art View Controller-->
+        <scene sceneID="Gdj-Qb-nwq">
+            <objects>
+                <viewController id="L01-hG-l8R" customClass="ArtViewController" customModule="Project_4___Camera" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bRY-00-E75"/>
+                        <viewControllerLayoutGuide type="bottom" id="K2E-YD-Yft"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GBK-ZP-tjm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pagani Huayra.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="l4g-cm-9B3">
+                                <rect key="frame" x="0.0" y="64" width="375" height="290"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="290" id="j2B-FK-JRW"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SOD-hv-ADV">
+                                <rect key="frame" x="66" y="384" width="243" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sI0-up-55P">
+                                <rect key="frame" x="172" y="444" width="30" height="30"/>
+                                <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addTapped:" destination="L01-hG-l8R" eventType="touchUpInside" id="Fa7-qg-y4t"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="SOD-hv-ADV" secondAttribute="trailing" constant="50" id="2Fr-4v-Q92"/>
+                            <constraint firstItem="l4g-cm-9B3" firstAttribute="leading" secondItem="GBK-ZP-tjm" secondAttribute="leading" id="2cE-LI-TnT"/>
+                            <constraint firstItem="l4g-cm-9B3" firstAttribute="top" secondItem="bRY-00-E75" secondAttribute="bottom" id="AUH-Vx-t5D"/>
+                            <constraint firstAttribute="trailing" secondItem="l4g-cm-9B3" secondAttribute="trailing" id="R5W-ca-pUD"/>
+                            <constraint firstItem="sI0-up-55P" firstAttribute="centerX" secondItem="GBK-ZP-tjm" secondAttribute="centerX" id="YO8-d8-XBj"/>
+                            <constraint firstItem="SOD-hv-ADV" firstAttribute="centerX" secondItem="GBK-ZP-tjm" secondAttribute="centerX" id="djv-v6-0Tt"/>
+                            <constraint firstItem="SOD-hv-ADV" firstAttribute="leading" secondItem="GBK-ZP-tjm" secondAttribute="leadingMargin" constant="50" id="eqs-dR-jTU"/>
+                            <constraint firstItem="sI0-up-55P" firstAttribute="top" secondItem="SOD-hv-ADV" secondAttribute="bottom" constant="30" id="j2a-lu-NUL"/>
+                            <constraint firstItem="SOD-hv-ADV" firstAttribute="top" secondItem="l4g-cm-9B3" secondAttribute="bottom" constant="30" id="kbx-R9-gKp"/>
+                            <constraint firstItem="l4g-cm-9B3" firstAttribute="centerX" secondItem="GBK-ZP-tjm" secondAttribute="centerX" id="msN-lK-hgf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ONU-kh-mX9">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="camera" id="yUC-ZM-9ab">
+                                <connections>
+                                    <action selector="cameraTapped:" destination="L01-hG-l8R" id="sJO-KD-lxk"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Photos" id="AO3-fc-jwV">
+                                <connections>
+                                    <action selector="photosTapped:" destination="L01-hG-l8R" id="dum-9O-apz"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="artView" destination="l4g-cm-9B3" id="y18-mK-u91"/>
+                        <outlet property="nameTextField" destination="SOD-hv-ADV" id="Glh-wY-H5k"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="63e-Zd-e21" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1720.8" y="123.68815592203899"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="0RN-vL-3Up">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="C1b-fV-zgw" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uJS-f9-gJE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="rG9-5D-LST"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gzl-tw-rpd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-31" y="124"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Pagani Huayra.jpg" width="1920" height="1200"/>
+    </resources>
 </document>

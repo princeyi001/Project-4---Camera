@@ -13,6 +13,8 @@
 		875090DB1F64D520006637BB /* Project_4___Camera.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 875090D91F64D520006637BB /* Project_4___Camera.xcdatamodeld */; };
 		875090DD1F64D520006637BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 875090DC1F64D520006637BB /* Assets.xcassets */; };
 		875090E01F64D520006637BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 875090DE1F64D520006637BB /* LaunchScreen.storyboard */; };
+		875090E81F64EA16006637BB /* Pagani Huayra.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 875090E71F64EA16006637BB /* Pagani Huayra.jpg */; };
+		875090EA1F64EC66006637BB /* ArtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875090E91F64EC66006637BB /* ArtViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		875090DC1F64D520006637BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		875090DF1F64D520006637BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		875090E11F64D520006637BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		875090E71F64EA16006637BB /* Pagani Huayra.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Pagani Huayra.jpg"; sourceTree = "<group>"; };
+		875090E91F64EC66006637BB /* ArtViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +60,10 @@
 		875090D11F64D520006637BB /* Project 4 - Camera */ = {
 			isa = PBXGroup;
 			children = (
+				875090E71F64EA16006637BB /* Pagani Huayra.jpg */,
 				875090D21F64D520006637BB /* AppDelegate.swift */,
 				875090D41F64D520006637BB /* ViewController.swift */,
+				875090E91F64EC66006637BB /* ArtViewController.swift */,
 				875090D61F64D520006637BB /* Main.storyboard */,
 				875090DC1F64D520006637BB /* Assets.xcassets */,
 				875090DE1F64D520006637BB /* LaunchScreen.storyboard */,
@@ -128,6 +134,7 @@
 			files = (
 				875090E01F64D520006637BB /* LaunchScreen.storyboard in Resources */,
 				875090DD1F64D520006637BB /* Assets.xcassets in Resources */,
+				875090E81F64EA16006637BB /* Pagani Huayra.jpg in Resources */,
 				875090D81F64D520006637BB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				875090EA1F64EC66006637BB /* ArtViewController.swift in Sources */,
 				875090DB1F64D520006637BB /* Project_4___Camera.xcdatamodeld in Sources */,
 				875090D51F64D520006637BB /* ViewController.swift in Sources */,
 				875090D31F64D520006637BB /* AppDelegate.swift in Sources */,
