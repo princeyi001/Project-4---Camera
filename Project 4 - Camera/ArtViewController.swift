@@ -48,6 +48,16 @@ class ArtViewController: UIViewController, UIImagePickerControllerDelegate, UINa
     }
     
     @IBAction func addTapped(_ sender: Any) {
+        
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
+        let art = Art(context: context)
+        art.name = nameTextField.text
+        art.image = UIImagePNGRepresentation(artView.image!) as NSData?
+        
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        
+        navigationController?.popViewController(animated: true)
     }
     
     /*
